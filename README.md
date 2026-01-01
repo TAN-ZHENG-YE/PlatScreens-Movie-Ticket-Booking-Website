@@ -1,7 +1,7 @@
 # PlatScreens - Movie Ticket Booking Web
 
 ## Project Overview
-
+![alt text](ReadMe_homepage.png)
 PlatScreens is a Movie Ticket Booking web designed for PlatScreens cinema. The system allows users to browse movies, book seats, manage their bookings, and enables administrators to manage movie listings and view booking records. This project is built with PHP, MySQL, JavaScript, and  integrates with AWS cloud services.
 
 ## Features

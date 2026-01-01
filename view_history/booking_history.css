@@ -1,0 +1,138 @@
+.booking-history-container {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.booking-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.2s ease;
+}
+
+.booking-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.invoice-id {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.booking-date {
+    color: #666;
+}
+
+.booking-details {
+    margin-bottom: 15px;
+}
+
+.movie-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.location {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.show-time {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.seats {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.booking-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.amount {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.payment-method {
+    color: #666;
+}
+
+.no-bookings {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.1em;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Scrollbar styling */
+.booking-history-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.booking-history-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.booking-history-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.booking-history-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .booking-card {
+        padding: 15px;
+    }
+    
+    .booking-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .booking-date {
+        margin-top: 5px;
+    }
+    
+    .booking-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .payment-method {
+        margin-top: 5px;
+    }
+} 

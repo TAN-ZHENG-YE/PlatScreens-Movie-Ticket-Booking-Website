@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Astralaga&display=swap');
+
+
+* {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #242333;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding-top: 50px;
+}
+
+.content-container {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+
+
+
+
+/* Added margin-top to ensure content is not hidden */
+.selection-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80%; /* Adjust width as necessary */
+  max-width: 100%; /* Ensure it doesn't overflow parent */
+  margin-top: 70px; /* Added margin to push down content */
+  padding: 5px; /* Increase padding for more space around the inputs */
+  background-color: #272539; /* Dark background color for contrast */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 10px 15px rgba(178, 185, 97, 0.5); /* 3D shadow effect */
+}
+
+.selection-container > div {
+  flex: 1; /* Each item takes equal space */
+  margin: 10px; /* Adjust space between the input containers */
+}
+
+.selection-container label {
+  display: flex;
+  margin-bottom: 5px;
+  font-size: 1.1em; /* Increase font size */
+}
+
+.selection-container select,
+.selection-container input {
+  font-size: 1.1em; /* Increase font size for inputs */
+  padding: 8px;
+  border: none;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* 3D shadow effect */
+  background-color: #b7920d; /* Input background color */
+  color: #fff; /* Input text color */
+  margin-bottom: 10px; /* Space between label and input */
+  outline: none; /* Remove default outline */
+}
+
+.selection-container select:focus,
+.selection-container input:focus {
+  box-shadow: 0 5px 15px rgba(230, 53, 53, 0.4); /* Enhanced shadow on focus */
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 5px;
+}
+
+.seat {
+  background-color: transparent;
+  background-size: cover;
+  height: 50px; /* Adjust the height to match your image height */
+  width: 55px; /* Adjust the width to match your image width */
+  margin: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none; /* Remove any border if exists */
+}
+
+.seat.available {
+  background-image: url('https://thomas123bucket.s3.us-east-1.amazonaws.com/images/CinemaSeatGreen.png');
+}
+
+.seat.selected {
+  background-image: url('https://thomas123bucket.s3.us-east-1.amazonaws.com/images/CinemaSeatGrey.png');
+}
+
+.seat.sold {
+  background-image: url('https://thomas123bucket.s3.us-east-1.amazonaws.com/images/CinemaSeatRed.png');
+}
+
+.seat:not(.sold):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .seat:not(.sold):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px; /* Add margin to account for the fixed navbar */
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 2px;
+}
+
+.row {
+  display: flex;
+}
+
+.stairs {
+  width: 40px; /* Adjust the width for the stairs space */
+  height: 50px; /* Adjust the height for the stairs space */
+  background-color: #555;
+  position: relative;
+  margin: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* Text color */
+  font-size: 14px; /* Adjust text size */
+  font-weight: bold; /* Make the text bold */
+}
+
+.stairs::before,
+.stairs::after {
+  content: '';
+  position: absolute;
+  width: 40px; /* Same as the width of the stairs */
+  height: 40px; /* Half the height of the stairs */
+  background-color: #444;
+  transform: rotateX(90deg) translateZ(-20px);
+}
+
+.stairs::before {
+  top: 0;
+}
+
+.stairs::after {
+  bottom: 0;
+  transform: rotateX(90deg) translateZ(20px);
+}
+
+.screen {
+  background-color: #fff;
+  height: 120px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-48deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+  margin: 5px 0;
+}
+
+p.text span {
+  color: rgb(158, 248, 158);
+}
+
+#next, #goBack {
+  font-size: 1.2em; /* Increase font size */
+  padding: 10px 30px; /* Increase padding for larger buttons */
+  border: none;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  margin-top: 10px; /* Space between buttons */
+  margin-right: 20px;
+  outline: none; /* Remove default outline */
+}
+
+#next {
+  background-color: #4CAF50; /* Green color */
+  color: #fff; /* Text color */
+  box-shadow: 0 5px 10px rgba(89, 239, 62, 0.773); /* 3D shadow effect */
+}
+
+#next:disabled {
+  background-color: #4f5046; /* Disabled button color */
+  cursor: not-allowed;
+}
+
+#next:focus {
+  box-shadow: 0 5px 15px rgba(230, 53, 53, 0.4); /* Enhanced shadow on focus */
+}
+
+#goBack {
+  background-color: red; /* Red color */
+  color: #fff; /* Text color */
+}
+
+#goBack:focus {
+  box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4); /* Red shadow on focus */
+}
+
+@media (max-width: 768px) {
+  .selection-container {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}
+
+

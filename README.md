@@ -30,7 +30,7 @@ PlatScreens is a Movie Ticket Booking web designed for PlatScreens cinema. The s
 - **Invoice Generation**: Automatic invoice creation for bookings
 
 ## Usage
-*Refer to `WebsiteFunctionalities.docx` for detailed instructions.*
+*Refer to `WebsiteFunctionalities.pdf` for detailed instructions.*
 
 ### For Users
 
@@ -240,7 +240,7 @@ This architecture emphasizes security, scalability, and fault tolerance through 
 
 
 ## Cloud Deployment Steps Overview (AWS)
-*Refer to `CloudDeployGuide.docx` for detailed instructions.*
+*Refer to `CloudDeployGuide.pdf` for detailed instructions.*
 ### 1. Network & Infrastructure Setup
 
 - Create a custom VPC (10.0.0.0/16) with public and private subnets across multiple Availability Zones.
